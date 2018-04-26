@@ -61,8 +61,8 @@ else if (isset($_SESSION['time_admin_valid_user'])) {
 }
 
 // end user moved here from topmain
-
-$get_user = stripslashes($_GET['username']);
+$get_user = isset($_POST['username']) ? $_POST['username'] : null;
+$get_user = stripslashes($get_user);
 disabled_acct($get_user);
 
 echo '     <ul class="sidebar-menu">

@@ -203,7 +203,7 @@ echo '<div class="box-header with-border">
     @$calc = $_POST['calc'];
     $row_count = '0';
     $cnt = '0';
-    $post_why = $_POST['post_why'];
+    $post_why = isset($_POST['post_why']) ? $_POST['post_why'] : null;
 
     $get_user = addslashes($get_user);
     $post_username = addslashes($post_username);
