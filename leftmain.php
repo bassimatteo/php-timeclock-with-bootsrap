@@ -597,7 +597,7 @@ if ($request == 'POST') { // Process employee's punch information
     // signin/signout data passed over from timeclock.php //
     $inout = $_POST['left_inout'];
 //    $notes = ereg_replace("[^[:alnum:] \,\.\?-]","",strtolower($_POST['left_notes']));
-    $notes = preg_replace("[^[:alnum:] \,\.\?-]","",strtolower($_POST['left_notes']));
+    $notes = preg_replace("#[^[:alnum:] \,\.\?-]#","",strtolower($_POST['left_notes']));
 
     // begin post validation //
     if ($use_passwd == "yes") {
